@@ -22,30 +22,31 @@ class login : AppCompatActivity() {
             validation()
         }
         binding.AskSignUp.setOnClickListener {
-            val intent = Intent(this,signup::class.java)
+            val intent = Intent(this, signup::class.java)
             startActivity(intent)
         }
 
     }
 
-    private fun validation(){
+    private fun validation() {
         val email = binding.Email.text.toString()
         val password = binding.Password.text.toString()
         var isValid = true
-        if (email.isEmpty()){
+        if (email.isEmpty()) {
             binding.LoginLayout1.error = "Complete This Field"
             isValid = false
         }
-        if (password.isEmpty()){
+        if (password.isEmpty()) {
             binding.LoginLayout2.error = "Complete This Field"
             isValid = false
         }
-        if (isValid){
+        if (isValid) {
             HomePage()
         }
     }
+
     private fun HomePage() {
-        val intent = Intent(this,MainActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 

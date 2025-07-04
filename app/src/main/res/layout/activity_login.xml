@@ -155,23 +155,23 @@
         android:id="@+id/fblogo"
         android:layout_width="36dp"
         android:layout_height="36dp"
-        android:layout_weight="1"
         android:layout_marginTop="15dp"
+        android:layout_weight="1"
         android:src="@drawable/facebook"
-        app:layout_constraintStart_toStartOf="@id/guideline7"
         app:layout_constraintEnd_toStartOf="@id/connectFb"
+        app:layout_constraintStart_toStartOf="@id/guideline7"
         app:layout_constraintTop_toBottomOf="@id/LinearLayout1" />
 
     <TextView
         android:id="@+id/connectFb"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
         android:layout_weight="4"
         android:text="Continue as _._inkandpaper__"
-        android:textSize="18dp"
-        android:layout_marginStart="10dp"
         android:textColor="#3797EF"
-        android:layout_marginTop="4dp"
+        android:textSize="18dp"
         app:layout_constraintStart_toEndOf="@id/fblogo"
         app:layout_constraintTop_toTopOf="@id/fblogo" />
 
@@ -186,36 +186,37 @@
         android:id="@+id/View1"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginBottom="70dp"
         android:background="#8E8E8E"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="70dp"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/Ask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
         android:fontFamily="sans-serif"
         android:text="Don't have an account?"
         android:textColor="#8E8E8E"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/View1"
-        app:layout_constraintStart_toEndOf="@id/guideline7" />
+        app:layout_constraintStart_toEndOf="@id/guideline7"
+        app:layout_constraintTop_toBottomOf="@id/View1" />
+
     <TextView
         android:id="@+id/AskSignUp"
-        android:layout_marginStart="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="6dp"
         android:fontFamily="sans-serif"
         android:text="Sign Up"
-        android:textStyle="bold"
         android:textColor="#3797EF"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/View1"
-        app:layout_constraintStart_toEndOf="@id/Ask" />
-
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/Ask"
+        app:layout_constraintTop_toBottomOf="@id/View1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

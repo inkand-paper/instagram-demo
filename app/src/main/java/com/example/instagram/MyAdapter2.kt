@@ -8,8 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import de.hdodenhof.circleimageview.CircleImageView
 
-class MyAdapter2(private val data: ArrayList<MyDataClass2>):RecyclerView.Adapter<MyAdapter2.MyViewHolder2>() {
-    class MyViewHolder2(itemView: View): RecyclerView.ViewHolder(itemView) {
+class MyAdapter2(private val data: ArrayList<MyDataClass2>) :
+    RecyclerView.Adapter<MyAdapter2.MyViewHolder2>() {
+    class MyViewHolder2(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val profile = itemView.findViewById<CircleImageView>(R.id.ProfilePicOnTopPost)
         val name = itemView.findViewById<TextView>(R.id.Name)
         val time = itemView.findViewById<TextView>(R.id.Time)
@@ -19,12 +20,12 @@ class MyAdapter2(private val data: ArrayList<MyDataClass2>):RecyclerView.Adapter
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder2 {
-        val myItem = LayoutInflater.from(parent.context).inflate(R.layout.post,parent,false)
+        val myItem = LayoutInflater.from(parent.context).inflate(R.layout.post, parent, false)
         return MyViewHolder2(myItem)
     }
 
     override fun getItemCount(): Int {
-        return  data.size
+        return data.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder2, position: Int) {

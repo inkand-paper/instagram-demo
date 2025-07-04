@@ -21,7 +21,7 @@ class signup : AppCompatActivity() {
         }
 
         binding.AskLogin.setOnClickListener {
-            val intent = Intent(this,login::class.java)
+            val intent = Intent(this, login::class.java)
             startActivity(intent)
         }
 
@@ -35,24 +35,24 @@ class signup : AppCompatActivity() {
 
         var isValid = true
 
-        if (email.isEmpty()){
+        if (email.isEmpty()) {
             binding.SignupLayout1.error = "Complete This Field"
             isValid = false
         }
-        if (name.isEmpty()){
+        if (name.isEmpty()) {
             binding.SignupLayout2.error = "Complete This Field"
             isValid = false
         }
-        if (username.isEmpty()){
+        if (username.isEmpty()) {
             binding.SignupLayout3.error = "Complete This Field"
             isValid = false
         }
-        if (password.isEmpty()){
+        if (password.isEmpty()) {
             binding.SignupLayout4.error = "Complete This Field"
             isValid = false
         }
-        if (isValid){
-            val intent = Intent(this,MainActivity::class.java)
+        if (isValid) {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

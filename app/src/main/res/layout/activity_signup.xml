@@ -262,35 +262,37 @@
         android:id="@+id/View1"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginBottom="70dp"
         android:background="#8E8E8E"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="70dp"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/Ask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
         android:fontFamily="sans-serif"
         android:text="Have an account?"
         android:textColor="#8E8E8E"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/View1"
-        app:layout_constraintStart_toStartOf="@id/guideline2" />
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/View1" />
+
     <TextView
         android:id="@+id/AskLogin"
-        android:layout_marginStart="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="6dp"
         android:fontFamily="sans-serif"
         android:text="Log in"
-        android:textStyle="bold"
         android:textColor="#3797EF"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/View1"
-        app:layout_constraintStart_toEndOf="@id/Ask" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/Ask"
+        app:layout_constraintTop_toBottomOf="@id/View1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

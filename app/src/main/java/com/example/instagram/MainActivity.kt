@@ -143,7 +143,8 @@ class MainActivity : AppCompatActivity() {
         )
 
     }
-    private fun initRecyclerView2(){
+
+    private fun initRecyclerView2() {
         val recyclerView2 = findViewById<RecyclerView>(R.id.postRecyclerView)
         recyclerView2.layoutManager =
             LinearLayoutManager(this)

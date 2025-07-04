@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -10,19 +10,19 @@
         app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <ImageView
                 android:layout_width="30dp"
-                app:layout_constraintBottom_toTopOf="@id/PostImage"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="30dp"
                 android:layout_marginBottom="8dp"
                 android:src="@drawable/_dot"
-                android:layout_height="30dp"/>
+                app:layout_constraintBottom_toTopOf="@id/PostImage"
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/ProfilePicOnTopPost"
@@ -41,10 +41,10 @@
                 android:id="@+id/Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:text="Robot"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:text="Robot"
                 android:textColor="#050505"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -65,68 +65,72 @@
 
             <ImageView
                 android:id="@+id/PostImage"
-                android:layout_marginTop="14dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
                 android:scaleType="center"
                 android:src="@drawable/postpic"
-                app:layout_constraintTop_toBottomOf="@id/ProfilePicOnTopPost"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/ProfilePicOnTopPost" />
+
             <LinearLayout
                 android:id="@+id/LinearLayout1forPost"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="4dp"
+                android:orientation="horizontal"
                 android:padding="6dp"
                 android:weightSum="3"
-                app:layout_constraintTop_toBottomOf="@id/PostImage"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/PostImage">
+
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="24dp"
                     android:layout_weight="1"
-                    android:src="@drawable/heart"/>
+                    android:src="@drawable/heart" />
+
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="24dp"
                     android:layout_weight="1"
-                    android:src="@drawable/chat"/>
+                    android:src="@drawable/chat" />
+
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="24dp"
                     android:layout_weight="1"
-                    android:src="@drawable/send"/>
+                    android:src="@drawable/send" />
 
             </LinearLayout>
+
             <TextView
                 android:id="@+id/Name2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:text="Robot"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:text="Robot"
                 android:textColor="#050505"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/LinearLayout1forPost"
-                app:layout_constraintTop_toBottomOf="@id/LinearLayout1forPost"/>
+                app:layout_constraintTop_toBottomOf="@id/LinearLayout1forPost" />
+
             <TextView
                 android:id="@+id/PostWritten"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:text="On a trip!!!"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:text="On a trip!!!"
                 android:textColor="#050505"
                 android:textSize="14sp"
-                app:layout_constraintTop_toBottomOf="@id/LinearLayout1forPost"
-                app:layout_constraintStart_toEndOf="@id/Name2"/>
-
-
+                app:layout_constraintStart_toEndOf="@id/Name2"
+                app:layout_constraintTop_toBottomOf="@id/LinearLayout1forPost" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
