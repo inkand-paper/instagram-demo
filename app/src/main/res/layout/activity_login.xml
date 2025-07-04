@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".login">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="190dp" />
+
+
+    <TextView
+        android:id="@+id/InstaLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Instagram"
+        android:textColor="#262626"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LoginLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="24dp"
+        android:hint="Mobile Number Or Email"
+        app:boxStrokeColor="#888"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@null"
+        app:hintEnabled="true"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/InstaLogo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="@color/black">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LoginLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        app:boxStrokeColor="#888"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#888"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@null"
+        app:hintEnabled="true"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LoginLayout1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColor="@color/black">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/ForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="sans-serif"
+        android:text="Forgotten Password?"
+        android:textColor="#8E8E8E"
+        app:layout_constraintEnd_toEndOf="@id/LoginLayout2"
+        app:layout_constraintTop_toBottomOf="@id/LoginLayout2" />
+
+    <Button
+        android:id="@+id/LoginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#3797EF"
+        android:text="Log In"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ForgotPassword" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:weightSum="15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LoginBtn">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_weight="7.1"
+            android:background="#8E8E8E" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text="OR"
+            android:textAlignment="center"
+            android:textColor="#8E8E8E"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_weight="7.1"
+            android:background="#8E8E8E" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/fblogo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_weight="1"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/facebook"
+        app:layout_constraintStart_toStartOf="@id/guideline7"
+        app:layout_constraintEnd_toStartOf="@id/connectFb"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayout1" />
+
+    <TextView
+        android:id="@+id/connectFb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:text="Continue as _._inkandpaper__"
+        android:textSize="18dp"
+        android:layout_marginStart="10dp"
+        android:textColor="#3797EF"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@id/fblogo"
+        app:layout_constraintTop_toTopOf="@id/fblogo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="70dp" />
+
+    <View
+        android:id="@+id/View1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#8E8E8E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/Ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif"
+        android:text="Don't have an account?"
+        android:textColor="#8E8E8E"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/View1"
+        app:layout_constraintStart_toEndOf="@id/guideline7" />
+    <TextView
+        android:id="@+id/AskSignUp"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="sans-serif"
+        android:text="Sign Up"
+        android:textStyle="bold"
+        android:textColor="#3797EF"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/View1"
+        app:layout_constraintStart_toEndOf="@id/Ask" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
