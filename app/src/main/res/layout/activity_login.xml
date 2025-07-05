@@ -22,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
+        android:textStyle="italic"
         android:text="Instagram"
         android:textColor="#262626"
         android:textSize="34sp"
